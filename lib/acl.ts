@@ -1,5 +1,3 @@
-import { type Block } from 'notion-types'
-
 import { type PageProps } from './types'
 
 export async function pageAcl({
@@ -37,7 +35,7 @@ export async function pageAcl({
     }
   }
 
-  const rootValue = recordMap.block[rootKey]?.value as unknown as Block | undefined
+  const rootValue = recordMap.block[rootKey]?.value
   const rootSpaceId = rootValue?.space_id
 
   if (
